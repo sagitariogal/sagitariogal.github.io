@@ -2,6 +2,9 @@ body {
     text-align: center;
     background-color: #c1cfda;
 }
+#logo {
+    margin: 40px;
+}
 .contact-hr {
     border: none;
     height: 50px;
@@ -12,7 +15,7 @@ body {
 }
 
 #logo {
-    width: 200px;
+    width: 400px;
     height: auto;
 }
 
@@ -94,7 +97,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     transition: filter 0.3s ease;
-    background-image: url("assets/contact_note_v3.png");
+    background-image: url("assets/contact_note.png");
 }
 .contact-panel:hover {
     filter: brightness(1.2);

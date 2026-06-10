@@ -8,7 +8,7 @@ body {
 .contact-hr {
     border: none;
     height: 50px;
-    background-image: url("assets/contact_icon.png");
+    background-image: url("assets/ui/contact_icon.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -30,19 +30,19 @@ body {
 }
 .about-btn {
     width: 98px;
-    background-image: url("assets/aboutF.png");
+    background-image: url("assets/ui/aboutF.png");
 }
 .portfolio-btn {
     width: 129px;
-    background-image: url("assets/portfolioF.png");
+    background-image: url("assets/ui/portfolioF.png");
 }
 .commissions-btn {
     width: 170px;
-    background-image: url("assets/commissionsF.png");
+    background-image: url("assets/ui/commissionsF.png");
 }
 .shop-btn {
     width: 79px;
-    background-image: url("assets/shopF.png");
+    background-image: url("assets/ui/shopF.png");
 }
 
 .nav-btn:hover {
@@ -67,23 +67,23 @@ body {
 }
 .soc-sep {
     width: 50px;
-    background-image: url("assets/sparkle_icon.png");
+    background-image: url("assets/ui/sparkle_icon.png");
 }
 .insta {
     width: 50px;
-    background-image: url("assets/instagram_icon.png");
+    background-image: url("assets/ui/instagram_icon.png");
 }
 .bsky {
     width: 50px;
-    background-image: url("assets/bsky_icon.png");
+    background-image: url("assets/ui/bsky_icon.png");
 }
 .twitch {
     width: 50px;
-    background-image: url("assets/twitch_icon.png");
+    background-image: url("assets/ui/twitch_icon.png");
 }
 .pinterest {
     width: 50px;
-    background-image: url("assets/pinterest_icon.png");
+    background-image: url("assets/ui/pinterest_icon.png");
 }
 .soc-btn:hover {
     filter: brightness(1.2);
@@ -97,7 +97,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     transition: filter 0.3s ease;
-    background-image: url("assets/contact_note.png");
+    background-image: url("assets/ui/contact_note.png");
 }
 .contact-panel:hover {
     filter: brightness(1.2);

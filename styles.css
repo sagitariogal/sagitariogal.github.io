@@ -1,0 +1,101 @@
+body {
+    text-align: center;
+    background-color: #c1cfda;
+}
+.contact-hr {
+    border: none;
+    height: 50px;
+    background-image: url("assets/contact_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+}
+
+.nav-btn,
+.soc-btn {
+    display: inline-block;
+    height: 50px;
+    text-indent: -9999px; /*hide*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: filter 0.3s ease;
+}
+.about-btn {
+    width: 98px;
+    background-image: url("assets/aboutF.png");
+}
+.portfolio-btn {
+    width: 129px;
+    background-image: url("assets/portfolioF.png");
+}
+.commissions-btn {
+    width: 170px;
+    background-image: url("assets/commissionsF.png");
+}
+.shop-btn {
+    width: 79px;
+    background-image: url("assets/shopF.png");
+}
+
+.nav-btn:hover {
+    filter: brightness(1.2);
+}
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#folder {
+    display: block;
+    max-width: 650px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.soc-links {
+    margin: 20px auto;
+}
+.soc-sep {
+    width: 50px;
+    background-image: url("assets/sparkle_icon.png");
+}
+.insta {
+    width: 50px;
+    background-image: url("assets/instagram_icon.png");
+}
+.bsky {
+    width: 50px;
+    background-image: url("assets/bsky_icon.png");
+}
+.twitch {
+    width: 50px;
+    background-image: url("assets/twitch_icon.png");
+}
+.pinterest {
+    width: 50px;
+    background-image: url("assets/pinterest_icon.png");
+}
+.soc-btn:hover {
+    filter: brightness(1.2);
+}
+
+.contact-panel {
+    display: inline-block;
+    width: 250px;
+    height: 230px;
+    text-indent: -9999px; /*hide*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: filter 0.3s ease;
+    background-image: url("assets/contact_note_v3.png");
+}
+.contact-panel:hover {
+    filter: brightness(1.2);
+}

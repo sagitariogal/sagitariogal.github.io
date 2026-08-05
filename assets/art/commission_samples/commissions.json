@@ -3,170 +3,102 @@
     "id": "d1",
     "category": "doodles",
     "filename": "d1.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["doodles", "animals", "nature"]
   },
 
   {
     "id": "d2",
     "category": "doodles",
     "filename": "d2.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["doodles", "animals", "nature"]
   },
 
   {
     "id": "d3",
     "category": "doodles",
     "filename": "d3.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["doodles", "animals", "nature"]
   },
 
   {
     "id": "i1",
     "category": "illustrations",
     "filename": "i1.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["illustrations",]
   },
 
   {
     "id": "i2",
     "category": "illustrations",
     "filename": "i2.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["illustrations",]
   },
 
   {
     "id": "i3",
     "category": "illustrations",
     "filename": "i3.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["illustrations",]
   },
 
   {
     "id": "i4",
     "category": "illustrations",
     "filename": "i4.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["illustrations",]
   },
 
   {
     "id": "i5",
     "category": "illustrations",
     "filename": "i5.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["illustrations",]
   },
 
   {
     "id": "i6",
     "category": "illustrations",
     "filename": "i6.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["illustrations",]
   },
 
   {
     "id": "i7",
     "category": "illustrations",
     "filename": "i7.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["illustrations",]
   },
 
   {
     "id": "i8",
     "category": "illustrations",
     "filename": "i8.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["illustrations",]
   },
 
   {
     "id": "l1",
     "category": "lineart",
     "filename": "l1.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["lineart",]
   },
 
   {
     "id": "l2",
     "category": "lineart",
     "filename": "l2.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["lineart",]
   },
 
   {
     "id": "l3",
     "category": "lineart",
     "filename": "l3.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["lineart",]
   },
 
   {
     "id": "l4",
     "category": "lineart",
     "filename": "l4.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["lineart",]
   },
 
   {
     "id": "l5",
     "category": "lineart",
     "filename": "l5.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["lineart",]
   },
 
   {
     "id": "l6",
     "category": "lineart",
     "filename": "l6.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["lineart",]
   },
 
 
@@ -174,30 +106,18 @@
     "id": "sa1",
     "category": "stream assets",
     "filename": "sa1.gif",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["stream assets",]
   },
 
   {
     "id": "sa2",
     "category": "stream assets",
     "filename": "sa2.png",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["stream assets",]
   },
 
   {
     "id": "sa3",
     "category": "stream assets",
     "filename": "sa3.gif",
-    "title": "",
-    "description": "",
-    "date": "2026-08-01",
-    "tags": ["stream assets",]
   },
 
 ]

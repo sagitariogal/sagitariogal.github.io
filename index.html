@@ -3,30 +3,387 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="" />
-        <meta name="author" content="IntellectualTux" />
+        <meta name="description" content="Sagi's Art Studio by Sagitariogal
+Whimsical illustrations inspired by nature.
+Textured digital art, mixed media paintings." />
+        <meta name="author" content="IntellectualTux aka Tux, sagitariogal" />
         <meta
             name="keywords"
             content="Cozy, Art, Studio, Poland, Warsaw, Sagi, Sagitariogal, Sagi's Art Studio, Paint, Painting"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+            rel="stylesheet"
         />
         <link rel="stylesheet" href="styles.css" />
         <title>Sagi's Art Studio!</title>
         <link rel="icon" href="assets/ui/frog_icon.png" />
     </head>
     <body>
+        <!-- My Bane -->
+        <svg style="position: absolute; width: 0; height: 0" aria-hidden="true">
+            <defs>
+                <filter id="pencil-texture" x="-15%" y="-15%" width="130%" height="130%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="fineGrain" />
+                    <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="pathNoise" />
+                    <feDisplacementMap
+                        in="SourceGraphic"
+                        in2="pathNoise"
+                        scale="5"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                        result="displacedStroke"
+                    />
+                    <feComposite
+                        in="displacedStroke"
+                        in2="fineGrain"
+                        operator="arithmetic"
+                        k1="1.2"
+                        k2="0.1"
+                        k3="0.4"
+                        k4="0"
+                        result="pencilLine"
+                    />
+                    <feMorphology in="pencilLine" operator="erode" radius="0.4" result="texturedPencil" />
+                    <feGaussianBlur in="texturedPencil" stdDeviation="0.4" result="blurred" />
+                    <feComponentTransfer in="blurred" result="finalPencil">
+                        <feFuncA type="linear" slope="1.8" intercept="-0.05" />
+                    </feComponentTransfer>
+                    <feComposite in="finalPencil" in2="SourceGraphic" operator="in" />
+                </filter>
+            </defs>
+        </svg>
+
         <header>
-            <img id="logo" src="assets/ui/logo2.png" alt="Sagi's Art Studio!" />
+            <img id="logo" src="assets/ui/logo_final.png" alt="Sagi's Art Studio!" />
         </header>
         <main>
-            <nav class="nav-bar">
-                <a class="nav-btn about-btn" href="#">About</a>
-                <a class="nav-btn portfolio-btn" href="#">Portfolio</a>
-                <a class="nav-btn commissions-btn" href="#">Commissions</a>
-                <a class="nav-btn shop-btn" href="#">Shop</a>
+            <nav class="nav-bar" role="tablist" aria-label="Site sections">
+                <button
+                    class="nav-btn about-btn is-active"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="panel-about"
+                    id="tab-about"
+                    data-tab="about"
+                >
+                    About
+                </button>
+                <button
+                    class="nav-btn portfolio-btn"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="panel-portfolio"
+                    id="tab-portfolio"
+                    data-tab="portfolio"
+                >
+                    Portfolio
+                </button>
+                <button
+                    class="nav-btn commissions-btn"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="panel-commissions"
+                    id="tab-commissions"
+                    data-tab="commissions"
+                >
+                    Commissions
+                </button>
+                <button
+                    class="nav-btn shop-btn"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="panel-shop"
+                    id="tab-shop"
+                    data-tab="shop"
+                >
+                    Shop
+                </button>
             </nav>
-            <img id="folder" src="assets/ui/folder_about me.png" alt="Folder" />
+
+            <!-- ABOUT Page -->
+            <section
+                id="panel-about"
+                class="panel is-active"
+                role="tabpanel"
+                aria-labelledby="tab-about"
+            >
+                <div class="folder-9slice">
+                    <div class="folder-inner about-bio-text">
+                        <p>Hi, my name is Sagi! Welcome to my art corner!</p>
+                        <p>
+                            I'm an artist creating whimsical illustrations
+                            inspired by nature, mostly working in Procreate
+                            and Pixquare but also traditionally with acrylic
+                            gouache and mixed media techniques.
+                        </p>
+                        <img
+                            class="about-pfp-corner"
+                            src="assets/ui/folder_about_me_pfp.png"
+                            alt="Illustrated portrait of Sagi"
+                        />
+                        <p>
+                            <a href="#commissions" data-tab-link="commissions">Available for commissions</a>!
+                        </p>
+                        <p>
+                            Here you can view some of my previous work and
+                            easily find all my socials, as well as get to
+                            know how to commission me and
+                            <a href="#contact">get in touch</a>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PORTFOLIO Page -->
+            <section
+                id="panel-portfolio"
+                class="panel"
+                role="tabpanel"
+                aria-labelledby="tab-portfolio"
+                hidden
+            >
+                <div class="folder-9slice folder-9slice--portfolio">
+                    <div class="folder-inner folder-inner--portfolio">
+                        <div class="portfolio-flow-controls">
+                            <button class="portfolio-flow-arrow flow-left" type="button" aria-label="Slow down / reverse flow">
+                                <img src="assets/ui/arrow.png" alt="" />
+                            </button>
+                            <span class="portfolio-flow-status" id="portfolio-flow-status">Drifting</span>
+                            <button class="portfolio-flow-arrow flow-right" type="button" aria-label="Speed up flow">
+                                <img src="assets/ui/arrow.png" alt="" class="pager-next-icon" />
+                            </button>
+                        </div>
+                        <div class="portfolio-rows" id="portfolio-rows">
+                            <p class="art-loading">Loading art…</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio detail modal -->
+                <div class="samples-modal-overlay" id="portfolio-modal" hidden>
+                    <div class="samples-modal" role="dialog" aria-modal="true" aria-label="Portfolio piece">
+                        <button class="samples-modal-close" type="button" id="portfolio-close" aria-label="Close">✕</button>
+                        <div class="samples-modal-viewport">
+                            <img class="samples-modal-img" id="portfolio-img" src="" alt="" />
+                        </div>
+                        <p class="samples-modal-hint">Click the image to zoom in</p>
+                        <div class="portfolio-modal-meta" id="portfolio-meta">
+                            <p class="portfolio-modal-desc" id="portfolio-desc"></p>
+                            <p class="portfolio-modal-sub" id="portfolio-sub"></p>
+                        </div>
+                        <div class="samples-modal-nav">
+                            <button class="pager-btn portfolio-prev" type="button" aria-label="Previous piece">
+                                <img src="assets/ui/arrow.png" alt="" />
+                            </button>
+                            <span class="pager-status" id="portfolio-status">1 / 1</span>
+                            <button class="pager-btn portfolio-next" type="button" aria-label="Next piece">
+                                <img src="assets/ui/arrow.png" alt="" class="pager-next-icon" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COMMISSIONS Page -->
+            <section
+                id="panel-commissions"
+                class="panel"
+                role="tabpanel"
+                aria-labelledby="tab-commissions"
+                hidden
+            >
+                <div class="folder-9slice">
+                    <div class="folder-inner">
+                        <div class="comm-status comm-status--open">
+                            Commissions are OPEN!
+                        </div>
+
+                        <p class="comm-intro">
+                            Would you like to commission me?
+                        </p>
+
+                        <div class="comm-grid">
+                            <div class="comm-card">
+                                <div class="comm-card-head">
+                                    <h3>Illustration</h3>
+                                    <button
+                                        class="samples-btn"
+                                        type="button"
+                                        data-category="illustrations"
+                                    >
+                                        Samples
+                                    </button>
+                                </div>
+                                <p class="comm-price">30€+</p>
+                                <p class="comm-desc">
+                                    Custom coloured illustration in my style with a
+                                    one-colour background. Includes
+                                    <strong>1–2 characters</strong> and simple decorations
+                                    (a frame, small items, etc).
+                                </p>
+                                <ul class="comm-addons">
+                                    <li><span class="addon-cost">30€</span> default package</li>
+                                    <li><span class="addon-cost">+5€</span> per extra character</li>
+                                    <li><span class="addon-cost">+10€</span> complex background/decorations</li>
+                                    <li><span class="addon-cost">+15€</span> commercial-use fee</li>
+                                </ul>
+                            </div>
+                            <div class="comm-card">
+                                <div class="comm-card-head">
+                                    <h3>Doodle</h3>
+                                    <button
+                                        class="samples-btn"
+                                        type="button"
+                                        data-category="doodles"
+                                    >
+                                        Samples
+                                    </button>
+                                </div>
+                                <p class="comm-price">5€+</p>
+                                <p class="comm-desc">
+                                    A quick doodle in my style with a one-colour
+                                    background. Includes <strong>1–2 characters</strong>
+                                    and simple accessories or nature elements (flowers,
+                                    branches, etc).
+                                </p>
+                                <ul class="comm-addons">
+                                    <li><span class="addon-cost">5€</span> default package</li>
+                                    <li><span class="addon-cost">+2€</span> per extra character</li>
+                                    <li><span class="addon-cost">+2.5€</span> commercial-use fee</li>
+                                </ul>
+                            </div>
+                            <div class="comm-card">
+                                <div class="comm-card-head">
+                                    <h3>Lineart</h3>
+                                    <button
+                                        class="samples-btn"
+                                        type="button"
+                                        data-category="lineart"
+                                    >
+                                        Samples
+                                    </button>
+                                </div>
+                                <p class="comm-price">15€+</p>
+                                <p class="comm-desc">
+                                    Custom lineart, not coloured illustration in my style with a
+                                    one-colour background. Includes
+                                    <strong>1–2 characters</strong> and simple decorations
+                                    (a frame, small items, etc).
+                                </p>
+                                <ul class="comm-addons">
+                                    <li><span class="addon-cost">15€</span> default package</li>
+                                    <li><span class="addon-cost">+2.5€</span> per extra character</li>
+                                    <li><span class="addon-cost">+7.5€</span> commercial-use fee</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="comm-terms">
+                            <div class="comm-terms-head">
+                                <h4>Traditional art</h4>
+                                <button
+                                    class="samples-btn"
+                                    type="button"
+                                    data-category="traditional"
+                                >
+                                    Samples
+                                </button>
+                            </div>
+                            <p>
+                                Thinking about a traditional piece? Send me a message and
+                                we can discuss what's possible — I'm able to ship to most
+                                places. An individual listing for the commission will be
+                                created in my Ko-fi shop once details are confirmed.
+                            </p>
+                        </div>
+
+                        <div class="comm-terms">
+                            <div class="comm-terms-head">
+                                <h4>Stream assets / emotes</h4>
+                                <button
+                                    class="samples-btn"
+                                    type="button"
+                                    data-category="stream assets"
+                                >
+                                    Samples
+                                </button>
+                            </div>
+                            <p>
+                                Need stream assets or emotes? Reach out to me via email and
+                                we'll work something out!
+                            </p>
+                        </div>
+
+                        <div class="comm-terms">
+                            <h4>Good to know</h4>
+                            <ul>
+                                <li><span class="will-draw">I will draw:</span> people, animals, fanart.</li>
+                                <li><span class="wont-draw">I won't draw:</span> NSFW, gore.</li>
+                                <li>
+                                    Usage license: reproduction and redistribution is
+                                    strictly prohibited — for personal use only.
+                                </li>
+                                <li>
+                                    Feel free to reach out about anything not listed at
+                                    <a href="mailto:zuzannaxp@gmail.com">zuzannaxp@gmail.com</a>.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a class="comm-cta" href="https://ko-fi.com/sagitariogal/commissions" target="_blank"
+                            >Get a quote / request a commission</a
+                        >
+                    </div>
+                </div>
+
+                <!-- Samples-->
+                <div class="samples-modal-overlay" id="samples-modal" hidden>
+                    <div class="samples-modal" role="dialog" aria-modal="true" aria-label="Commission samples">
+                        <button class="samples-modal-close" type="button" id="samples-close" aria-label="Close">✕</button>
+                        <h4 class="samples-modal-title" id="samples-title"></h4>
+                        <div class="samples-modal-viewport">
+                            <img class="samples-modal-img" id="samples-img" src="" alt="" />
+                        </div>
+                        <p class="samples-modal-hint">Click the image to zoom in</p>
+                        <div class="samples-modal-nav">
+                            <button class="pager-btn samples-prev" type="button" aria-label="Previous sample">
+                                <img src="assets/ui/arrow.png" alt="" />
+                            </button>
+                            <span class="pager-status" id="samples-status">1 / 1</span>
+                            <button class="pager-btn samples-next" type="button" aria-label="Next sample">
+                                <img src="assets/ui/arrow.png" alt="" class="pager-next-icon" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SHOP Page -->
+            <section
+                id="panel-shop"
+                class="panel"
+                role="tabpanel"
+                aria-labelledby="tab-shop"
+                hidden
+            >
+                <div class="folder-9slice">
+                    <div class="folder-inner folder-inner--center">
+                        <img class="shop-mascot" src="assets/ui/pengu_icon.png" alt="" />
+                        <h3 class="shop-heading">The shop is still brewing!</h3>
+                        <p class="shop-desc">
+                            Meanwhile, check out the current shop over at Ko-fi!
+                        </p>
+                        <a class="shop-cta" href="https://ko-fi.com/sagitariogal/shop" target="_blank"
+                            >Current Ko-fi shop!</a
+                        >
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer>
+        <footer id="contact">
             <nav class="soc-links">
                 <a
                     target="_blank"
@@ -64,5 +421,6 @@
                 >Contact</a
             >
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>

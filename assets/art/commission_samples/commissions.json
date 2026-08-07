@@ -2,6 +2,7 @@
   {
     "id": "d1",
     "category": "doodles",
+<<<<<<< HEAD
     "filename": "d1.png",
   },
 
@@ -121,3 +122,108 @@
   },
 
 ]
+=======
+    "filename": "d1.png"
+  },
+  {
+    "id": "d2",
+    "category": "doodles",
+    "filename": "d2.png"
+  },
+  {
+    "id": "d3",
+    "category": "doodles",
+    "filename": "d3.png"
+  },
+  {
+    "id": "i1",
+    "category": "illustrations",
+    "filename": "i1.png"
+  },
+  {
+    "id": "i2",
+    "category": "illustrations",
+    "filename": "i2.png"
+  },
+  {
+    "id": "i3",
+    "category": "illustrations",
+    "filename": "i3.png"
+  },
+  {
+    "id": "i4",
+    "category": "illustrations",
+    "filename": "i4.png"
+  },
+  {
+    "id": "i5",
+    "category": "illustrations",
+    "filename": "i5.png"
+  },
+  {
+    "id": "i6",
+    "category": "illustrations",
+    "filename": "i6.png"
+  },
+  {
+    "id": "i7",
+    "category": "illustrations",
+    "filename": "i7.png"
+  },
+  {
+    "id": "i8",
+    "category": "illustrations",
+    "filename": "i8.png"
+  },
+  {
+    "id": "l1",
+    "category": "lineart",
+    "filename": "l1.png"
+  },
+  {
+    "id": "l2",
+    "category": "lineart",
+    "filename": "l2.png"
+  },
+  {
+    "id": "l3",
+    "category": "lineart",
+    "filename": "l3.png"
+  },
+  {
+    "id": "l4",
+    "category": "lineart",
+    "filename": "l4.png"
+  },
+  {
+    "id": "l5",
+    "category": "lineart",
+    "filename": "l5.png"
+  },
+  {
+    "id": "l6",
+    "category": "lineart",
+    "filename": "l6.png"
+  },
+  {
+    "id": "sa1",
+    "category": "stream assets",
+    "filename": "sa1.gif"
+  },
+  {
+    "id": "sa2",
+    "category": "stream assets",
+    "filename": "sa2.png"
+  },
+  {
+    "id": "sa3",
+    "category": "stream assets",
+    "filename": "sa3.gif"
+  },
+  {
+    "id": "t1",
+    "category": "traditional",
+    "filename": "t1.jpg"
+  }
+]
+>>>>>>> 2d478c5 (V1)

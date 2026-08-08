@@ -25,7 +25,7 @@
     "filename": "6_01_26birbfest_day7_stellersseaeagle.png",
     "category": "illustration",
     "date": "2026-01-06",
-    "description": "Birb Fest Day 7 - Steller's Sea Eagle"
+    "description": "Birbfest - Steller's Sea Eagle"
   },
   {
     "id": "por5",
@@ -81,7 +81,7 @@
     "filename": "19_01_26_birbfest_day19_redleggedseriema.png",
     "category": "illustration",
     "date": "2026-01-19",
-    "description": "Birb Fest Day 19 - Red-Legged Seriema"
+    "description": "Birbfest Day 19 - Red-Legged Seriema"
   },
   {
     "id": "por13",
@@ -102,7 +102,7 @@
     "filename": "29_01_26birbfest_gallerywall.png",
     "category": "illustration",
     "date": "2026-01-29",
-    "description": "Birb Fest - Gallery Wall"
+    "description": "Birbfest - Gallery Wall"
   },
   {
     "id": "por16",
@@ -138,5 +138,40 @@
     "category": "illustration",
     "date": "2026-03-10",
     "description": "Custom Illustration Commission for Sara"
+    },
+  {
+    "id": "por21",
+    "filename": "26_01_26_birbfest_day26_commoncuckoo.png",
+    "category": "illustration",
+    "date": "2026-01-26",
+    "description": "Birbfest - Common Cuckoo"
+  },
+ {
+    "id": "por22",
+    "filename": "21_06_26_birbfest_manycolouredrushtyrant_birds.png",
+    "category": "illustration",
+    "date": "2026-06-21",
+    "description": "Birbfest - Manycoloured Rush Tyrant"
+  },
+{
+    "id": "por23",
+    "filename": "21_03_26_pansies_flowers.png",
+    "category": "illustration",
+    "date": "2026-03-21",
+    "description": "Pixel art pansies flowers"
+  },
+{
+    "id": "por24",
+    "filename": "20_03_26_paste up warsaw_pixel art.png",
+    "category": "illustration",
+    "date": "2026-03-20",
+    "description": "PasteUp Warsaw 2026 - pixel art flowers"
+  },
+{
+    "id": "por25",
+    "filename": "13_02_26_moths_frame_commission_sakenna.jpg",
+    "category": "illustration",
+    "date": "2026-02-13",
+    "description": "Traditional painting commission"
   }
 ]

@@ -796,7 +796,7 @@ main {
 /* ---------- Responsive-ish ---------- */
 /* fix later or add warning banner for mobile users */
 
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
     #logo {
     width: 280px;
     }
@@ -809,3 +809,4 @@ main {
         border-width: 6px;
     }
 }
+*/

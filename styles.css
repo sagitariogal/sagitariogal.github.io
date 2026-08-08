@@ -40,7 +40,7 @@ max-width: 90vw;
 .nav-btn {
     display: inline-block;
     height: 85px;
-    text-indent: -9999px; /*hide*/
+    text-indent: -99999px; /*hide*/
     background-size: contain;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -745,7 +745,7 @@ main {
 .soc-btn {
     display: inline-block;
     min-height: 85px;
-    text-indent: -9999px;
+    text-indent: -99999px; /*hide*/
     background-size: contain;
     background-repeat: no-repeat;
     transition: filter 0.3s ease;
@@ -782,7 +782,7 @@ main {
     display: inline-block;
     width: 250px;
     height: 230px;
-    text-indent: -9999px;
+    text-indent: -99999px; /*hide*/
     background-size: contain;
     background-repeat: no-repeat;
     transition: filter 0.3s ease;

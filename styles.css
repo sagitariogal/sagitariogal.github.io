@@ -198,8 +198,8 @@ main {
     border-width: 5px;
 }
 .comm-status::before {
-    inset: -1.5px;
-    border-width: 4px;
+    inset: -2px;
+    border-width: 5px;
 }
 .portfolio-thumb-btn::before {
     inset: -2px;
@@ -485,9 +485,9 @@ main {
 .samples-btn::before {
     content: "";
     position: absolute;
-    inset: -1px;
+    inset: -2px;
     border-style: solid;
-    border-width: 3px;
+    border-width: 4.3px;
     border-color: var(--ink);
     border-radius: inherit;
     pointer-events: none;

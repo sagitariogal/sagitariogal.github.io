@@ -168,7 +168,7 @@
                 <div class="samples-modal-overlay" id="portfolio-modal" hidden>
                     <div class="samples-modal" role="dialog" aria-modal="true" aria-label="Portfolio piece">
                         <button class="samples-modal-close" type="button" id="portfolio-close" aria-label="Close">✕</button>
-                        <div class="samples-modal-viewport">
+                        <div class="samples-modal-viewport" id="portfolio-viewport">
                             <img class="samples-modal-img" id="portfolio-img" src="" alt="" />
                         </div>
                         <p class="samples-modal-hint">Click the image to zoom in</p>
@@ -346,7 +346,8 @@
                     <div class="samples-modal" role="dialog" aria-modal="true" aria-label="Commission samples">
                         <button class="samples-modal-close" type="button" id="samples-close" aria-label="Close">✕</button>
                         <h4 class="samples-modal-title" id="samples-title"></h4>
-                        <div class="samples-modal-viewport">
+                        <div class="samples-modal-viewport" id="samples-viewport">
+                            <div class="samples-modal-spinner" aria-hidden="true"></div>
                             <img class="samples-modal-img" id="samples-img" src="" alt="" />
                         </div>
                         <p class="samples-modal-hint">Click the image to zoom in</p>

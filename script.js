@@ -71,12 +71,22 @@
     let items = []; // master list, in JSON order
     let current = [];
     let index = 0;
+    const imageCache = new Map(); // filename -> Image, keeps decoded images warm across the continuous loop
     let speed = DEFAULT_SPEED;
     let modalOpen = false;
     const rows = []; // { track, offset, singleWidth, dir }
 
     function imgPath(item) {
         return `assets/art/portfolio/${encodeURIComponent(item.filename)}`;
+    }
+
+    function preloadImages(allItems) {
+        allItems.forEach((item) => {
+            if (imageCache.has(item.filename)) return;
+            const img = new Image();
+            img.src = imgPath(item);
+            imageCache.set(item.filename, img);
+        });
     }
 
     function formatDate(dateStr) {
@@ -156,16 +166,34 @@
     // ---- Continuous animation -------------------------------------------------
 
     function tick() {
-        if (!modalOpen && speed !== 0) {
-            rows.forEach((row) => {
-                if (!row.singleWidth || row.hovering) return;
-                row.offset += row.dir * speed * PX_PER_SPEED_UNIT;
-                if (row.offset <= -row.singleWidth) row.offset += row.singleWidth;
-                else if (row.offset > 0) row.offset -= row.singleWidth;
-                row.track.style.transform = `translateX(${row.offset}px)`;
-            });
+        try {
+            if (!modalOpen && speed !== 0) {
+                rows.forEach((row) => {
+                    if (row.hovering) return;
+                    if (!row.singleWidth) {
+                        const w = row.track.scrollWidth / 2;
+                        if (w > 0) row.singleWidth = w;
+                        else return;
+                    }
+                    row.offset += row.dir * speed * PX_PER_SPEED_UNIT;
+                    if (row.offset <= -row.singleWidth) row.offset += row.singleWidth;
+                    else if (row.offset > 0) row.offset -= row.singleWidth;
+                    row.track.style.transform = `translateX(${row.offset}px)`;
+                });
+            }
+        } catch (err) {
+            console.warn("portfolio marquee tick error", err);
         }
         requestAnimationFrame(tick);
+    }
+
+    const portfolioTabBtn = document.getElementById("tab-portfolio");
+    if (portfolioTabBtn) {
+        portfolioTabBtn.addEventListener("click", () => {
+            rows.forEach((row) => {
+                row.hovering = false;
+            });
+        });
     }
 
     function updateFlowStatus() {
@@ -287,6 +315,7 @@
                 container.innerHTML = `<p class="art-loading">Check back soon!</p>`;
                 return;
             }
+            preloadImages(items);
             renderRows();
         })
         .catch((err) => {
@@ -306,6 +335,7 @@
     if (!overlay || !buttons.length) return;
 
     const imgEl = document.getElementById("samples-img");
+    const viewportEl = document.getElementById("samples-viewport");
     const titleEl = document.getElementById("samples-title");
     const statusEl = document.getElementById("samples-status");
     const closeBtn = document.getElementById("samples-close");
@@ -316,9 +346,22 @@
     let byCategory = null; // filled once the JSON loads
     let current = [];
     let index = 0;
+    const imageCache = new Map(); // filename -> Image, warmed on hover/focus/open
 
     function samplePath(item) {
         return `assets/art/commission_samples/${encodeURIComponent(item.category)}/${encodeURIComponent(item.filename)}`;
+    }
+
+
+    function preloadCategory(category) {
+        if (!byCategory) return; // JSON hasn't loaded yet
+        const list = byCategory[category] || [];
+        list.forEach((item) => {
+            if (imageCache.has(item.filename)) return;
+            const img = new Image();
+            img.src = samplePath(item);
+            imageCache.set(item.filename, img);
+        });
     }
 
     function setExpanded(expanded) {
@@ -328,7 +371,18 @@
     function render() {
         if (!current.length) return;
         const item = current[index];
-        imgEl.src = samplePath(item);
+        const path = samplePath(item);
+
+        if (viewportEl) viewportEl.classList.add("is-loading");
+        const clearLoading = () => {
+            if (imgEl.src.endsWith(encodeURIComponent(item.filename)) && viewportEl) {
+                viewportEl.classList.remove("is-loading");
+            }
+        };
+        imgEl.addEventListener("load", clearLoading, { once: true });
+        imgEl.addEventListener("error", clearLoading, { once: true });
+
+        imgEl.src = path;
         imgEl.alt = `${item.category} sample ${index + 1}`;
         statusEl.textContent = `${index + 1} / ${current.length}`;
         const multi = current.length > 1;
@@ -347,6 +401,7 @@
             statusEl.textContent = "Coming soon!";
             prevBtn.hidden = true;
             nextBtn.hidden = true;
+            if (viewportEl) viewportEl.classList.remove("is-loading");
         } else {
             render();
         }
@@ -357,6 +412,7 @@
         overlay.hidden = true;
         imgEl.src = "";
         setExpanded(false);
+        if (viewportEl) viewportEl.classList.remove("is-loading");
     }
 
     imgEl.addEventListener("click", () => {
@@ -365,7 +421,12 @@
     });
 
     buttons.forEach((btn) => {
-        btn.addEventListener("click", () => open(btn.dataset.category));
+        btn.addEventListener("mouseenter", () => preloadCategory(btn.dataset.category));
+        btn.addEventListener("focus", () => preloadCategory(btn.dataset.category));
+        btn.addEventListener("click", () => {
+            preloadCategory(btn.dataset.category); // touch devices skip hover/focus
+            open(btn.dataset.category);
+        });
     });
 
     closeBtn.addEventListener("click", close);

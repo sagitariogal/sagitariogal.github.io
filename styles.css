@@ -624,6 +624,7 @@ main {
     cursor: pointer;
     color: var(--ink);
     padding: 4px;
+    z-index: 2;
 }
 .samples-modal-close:hover {
     color: var(--blue);

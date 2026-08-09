@@ -4,7 +4,7 @@ Source code is licensed under the MIT License.
 
 ## Assets
 
-Copyright (c) 2026 Sagitariogal
+Copyright (c) 2026-Present Sagitariogal
 
 All artwork, illustrations, images, logos, graphics,
 animations, audio files, and other non-code assets in

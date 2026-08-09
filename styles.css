@@ -6,6 +6,11 @@
     --blue-soft: #7fb0e0;
     font-family: "Nunito", "Comic Sans MS", sans-serif;
     zoom: 90%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /* stupid auto adjust ruining my layout */
 }
 
 * {
@@ -852,13 +857,6 @@ main {
 
 .tux:hover {
   animation: rainbow-cycle 3s linear infinite;
-
-  /*
-    oklch(lightness chroma hue)
-    - 0.85 = High lightness (soft/bright, non-harsh)
-    - 0.12 = Controlled chroma (prevents harsh neon saturation)
-    - var(--hue) = Smoothly rotating angle
-  */
   filter: drop-shadow(0 0 12px oklch(0.85 0.12 var(--hue)));
 }
 

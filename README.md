@@ -10,4 +10,6 @@
 [Ko-fi](https://ko-fi.com/sagitariogal)
 
 
-[Made by [Tux](https://tux.fish)]
+[Made by [Tux](https://tux.fish)] [Assets and Concept by [Sagi](https://sagitariogal.github.io)]
+
+[[License](https://sagitariogal.github.io/LICENSE.md)]

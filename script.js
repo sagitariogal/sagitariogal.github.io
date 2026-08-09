@@ -39,6 +39,46 @@
 })();
 
 // ---------------------------------------------------------------------
+
+function setupSwipeNav(target, prevBtn, nextBtn, onTap) {
+    if (!target || !prevBtn || !nextBtn) return;
+
+    const DRAG_THRESHOLD = 40;
+    const TAP_THRESHOLD = 10;
+    let dragging = false;
+    let startX = 0;
+    let startY = 0;
+
+    target.style.touchAction = "pan-y";
+
+    target.addEventListener("pointerdown", (e) => {
+        if (e.button !== undefined && e.button !== 0) return;
+        dragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        target.setPointerCapture(e.pointerId);
+    });
+
+    function endDrag(e) {
+        if (!dragging) return;
+        dragging = false;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+
+        if (Math.abs(dx) > DRAG_THRESHOLD && Math.abs(dx) > Math.abs(dy)) {
+            if (dx < 0) nextBtn.click();
+            else prevBtn.click();
+        } else if (onTap && Math.abs(dx) < TAP_THRESHOLD && Math.abs(dy) < TAP_THRESHOLD) {
+            onTap();
+        }
+    }
+    target.addEventListener("pointerup", endDrag);
+    target.addEventListener("pointercancel", () => {
+        dragging = false;
+    });
+}
+
+// ---------------------------------------------------------------------
 // Portfolio: 3 continuously auto-scrolling marquees
 // ---------------------------------------------------------------------
 (function setupPortfolio() {
@@ -60,6 +100,7 @@
 
     const modal = document.getElementById("portfolio-modal");
     const imgEl = document.getElementById("portfolio-img");
+    const viewportEl = document.getElementById("portfolio-viewport");
     const descEl = document.getElementById("portfolio-desc");
     const subEl = document.getElementById("portfolio-sub");
     const statusEl = document.getElementById("portfolio-status");
@@ -276,10 +317,6 @@
     }
 
     if (modal) {
-        imgEl.addEventListener("click", () => {
-            if (!current.length) return;
-            setExpanded(!panel.classList.contains("is-expanded"));
-        });
         closeBtn.addEventListener("click", closeModal);
         modal.addEventListener("click", (e) => {
             if (e.target === modal) closeModal();
@@ -299,6 +336,10 @@
             if (!current.length) return;
             index = (index + 1) % current.length;
             render();
+        });
+        setupSwipeNav(viewportEl, prevBtn, nextBtn, () => {
+            if (!current.length) return;
+            setExpanded(!panel.classList.contains("is-expanded"));
         });
     }
 
@@ -351,7 +392,6 @@
     function samplePath(item) {
         return `assets/art/commission_samples/${encodeURIComponent(item.category)}/${encodeURIComponent(item.filename)}`;
     }
-
 
     function preloadCategory(category) {
         if (!byCategory) return; // JSON hasn't loaded yet
@@ -415,11 +455,6 @@
         if (viewportEl) viewportEl.classList.remove("is-loading");
     }
 
-    imgEl.addEventListener("click", () => {
-        if (!current.length) return;
-        setExpanded(!panel.classList.contains("is-expanded"));
-    });
-
     buttons.forEach((btn) => {
         btn.addEventListener("mouseenter", () => preloadCategory(btn.dataset.category));
         btn.addEventListener("focus", () => preloadCategory(btn.dataset.category));
@@ -449,6 +484,10 @@
         if (!current.length) return;
         index = (index + 1) % current.length;
         render();
+    });
+    setupSwipeNav(viewportEl, prevBtn, nextBtn, () => {
+        if (!current.length) return;
+        setExpanded(!panel.classList.contains("is-expanded"));
     });
 
     fetch(SAMPLES_JSON)

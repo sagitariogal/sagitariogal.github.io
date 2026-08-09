@@ -820,10 +820,53 @@ main {
     background-image: url("assets/ui/contact_note.png");
     margin-bottom: 30px;
 }
+
 .contact-panel:hover {
     filter: brightness(1.2);
 }
 
+.tux {
+    display: inline-block;
+    width: 86px;
+    height: 111px;
+    text-indent: -99999px; /*hide*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: filter 0.3s ease;
+    background-image: url("assets/ui/pengu_icon.png");
+    margin-bottom: 30px;
+}
+/* ---------- Tux Funzies ---------- */
+@property --hue {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.tux {
+  position: relative;
+  display: inline-block;
+  transition: filter 0.3s ease;
+  pointer-events: auto;
+}
+
+.tux:hover {
+  animation: rainbow-cycle 3s linear infinite;
+
+  /*
+    oklch(lightness chroma hue)
+    - 0.85 = High lightness (soft/bright, non-harsh)
+    - 0.12 = Controlled chroma (prevents harsh neon saturation)
+    - var(--hue) = Smoothly rotating angle
+  */
+  filter: drop-shadow(0 0 12px oklch(0.85 0.12 var(--hue)));
+}
+
+@keyframes rainbow-cycle {
+  to {
+    --hue: 360deg;
+  }
+}
 /* ---------- Responsive-ish ---------- */
 /* fix later or add warning banner for mobile users */
 

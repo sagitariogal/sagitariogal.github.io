@@ -16,10 +16,10 @@
       {
         "type": 12,
         "items": [
-          { "media": { "url": "https://sagitariogal.github.io/assets/discord-embed/d1.png" } },
-          { "media": { "url": "https://sagitariogal.github.io/assets/discord-embed/d2.png" } },
-          { "media": { "url": "https://sagitariogal.github.io/assets/discord-embed/d3.png" } },
-          { "media": { "url": "https://sagitariogal.github.io/assets/discord-embed/d4.png" } }
+          { "media": { "url": "https://sagitariogal.github.io/assets/art/discord-embed/d1.png" } },
+          { "media": { "url": "https://sagitariogal.github.io/assets/art/discord-embed/d2.png" } },
+          { "media": { "url": "https://sagitariogal.github.io/assets/art/discord-embed/d3.png" } },
+          { "media": { "url": "https://sagitariogal.github.io/assets/art/discord-embed/d4.png" } }
         ]
       },
       { "type": 10, "content": "*Available for commissions!* \u2728" },

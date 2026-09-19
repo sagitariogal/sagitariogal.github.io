@@ -1,0 +1,46 @@
+{
+  "component": {
+    "type": 17,
+    "accent_color": 12701658,
+    "components": [
+      {
+        "type": 9,
+        "components": [
+          { "type": 10, "content": "# Sagi's Art Studio\nWhimsical illustrations inspired by nature!" }
+        ],
+        "accessory": {
+          "type": 11,
+          "media": { "url": "https://sagitariogal.github.io/assets/ui/folder_about_me_pfp.png" }
+        }
+      },
+      {
+        "type": 12,
+        "items": [
+          { "media": { "url": "https://sagitariogal.github.io/assets/discord-embed/d1.png" } },
+          { "media": { "url": "https://sagitariogal.github.io/assets/discord-embed/d2.png" } },
+          { "media": { "url": "https://sagitariogal.github.io/assets/discord-embed/d3.png" } },
+          { "media": { "url": "https://sagitariogal.github.io/assets/discord-embed/d4.png" } }
+        ]
+      },
+      { "type": 10, "content": "*Available for commissions!* \u2728" },
+      { "type": 14 },
+      {
+        "type": 1,
+        "components": [
+          { "type": 2, "style": 5, "url": "https://sagitariogal.github.io/#portfolio", "label": "Portfolio" },
+          { "type": 2, "style": 5, "url": "https://sagitariogal.github.io/#commissions", "label": "Commissions" },
+          { "type": 2, "style": 5, "url": "https://ko-fi.com/sagitariogal", "label": "Shop" }
+        ]
+      },
+      {
+        "type": 1,
+        "components": [
+          { "type": 2, "style": 5, "url": "https://instagram.com/sagitariogal", "label": "Instagram" },
+          { "type": 2, "style": 5, "url": "https://bsky.app/profile/sagitariogal.bsky.social", "label": "Bluesky" },
+          { "type": 2, "style": 5, "url": "https://twitch.tv/sagitariogal", "label": "Twitch" },
+          { "type": 2, "style": 5, "url": "https://pl.pinterest.com/sagitariogal_/", "label": "Pinterest" }
+        ]
+      }
+    ]
+  }
+}

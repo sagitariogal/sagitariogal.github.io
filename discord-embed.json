@@ -8,14 +8,12 @@
             "components": [
               {
                 "type": 10,
-                "content": "[# Sagi's Art Studio](https://sagitariogal.github.io)\nWhimsical illustrations inspired by nature!\n*Available for commissions!*"
+                "content": "[**Sagi's Art Studio**](https://sagitariogal.github.io)\nWhimsical illustrations inspired by nature!\n*Available for commissions!*"
               }
             ],
             "accessory": {
-              "type": 2,
-              "style": 5,
-              "label": "Open link",
-              "url": "https://sagitariogal.github.io"
+              "type": 11,
+              "media": { "url": "https://sagitariogal.github.io/assets/ui/folder_about_me_pfp.png" }
             }
           },
           {
@@ -51,6 +49,16 @@
           {
             "type": 1,
             "components": [
+              {
+                "type": 2,
+                "style": 5,
+                "label": "Website",
+                "url": "https://sagitariogal.github.io",
+                "emoji": {
+                  "id": "1551672260799234130",
+                  "name": "sparkleicon"
+                }
+              },
               {
                 "type": 2,
                 "style": 5,

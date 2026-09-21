@@ -8,7 +8,7 @@
             "components": [
               {
                 "type": 10,
-                "content": "[**Sagi's Art Studio**](https://sagitariogal.github.io)\nWhimsical illustrations inspired by nature!\n*Available for commissions!*"
+                "content": "[**Sagi's Art Studio**](https://sagitariogal.github.io)\nI'm an artist creating whimsical illustrations inspired by nature, mostly working in Procreate and Pixquare but also traditionally with acrylic gouache and mixed media techniques.\n*Available for commissions!*"
               }
             ],
             "accessory": {
@@ -62,16 +62,6 @@
                 "emoji": {
                   "id": "1551672182088798239",
                   "name": "instagramicon"
-                }
-              },
-              {
-                "type": 2,
-                "style": 5,
-                "label": "Bsky",
-                "url": "https://bsky.app/profile/sagitariogal.bsky.social",
-                "emoji": {
-                  "id": "1551672136756760706",
-                  "name": "bskyicon"
                 }
               }
             ]

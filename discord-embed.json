@@ -52,8 +52,8 @@
               {
                 "type": 2,
                 "style": 5,
-                "label": "Shop",
-                "url": "https://ko-fi.com/sagitariogal",
+                "label": "Comms",
+                "url": "https://sagitariogal.github.io/#commissions",
                 "emoji": {
                   "id": "1551672260799234130",
                   "name": "sparkleicon"
@@ -62,8 +62,8 @@
               {
                 "type": 2,
                 "style": 5,
-                "label": "Comms",
-                "url": "https://sagitariogal.github.io/#commissions",
+                "label": "Shop",
+                "url": "https://ko-fi.com/sagitariogal",
                 "emoji": {
                   "id": "1551672260799234130",
                   "name": "sparkleicon"

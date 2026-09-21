@@ -22,31 +22,6 @@
             "spacing": 1
           },
           {
-            "type": 12,
-            "items": [
-              {
-                "media": {
-                  "url": "https://sagitariogal.github.io/assets/art/discord-embed/d1.png"
-                }
-              },
-              {
-                "media": {
-                  "url": "https://sagitariogal.github.io/assets/art/discord-embed/d3.png"
-                }
-              },
-              {
-                "media": {
-                  "url": "https://sagitariogal.github.io/assets/art/discord-embed/d4.png"
-                }
-              }
-            ]
-          },
-          {
-            "type": 14,
-            "divider": true,
-            "spacing": 1
-          },
-          {
             "type": 1,
             "components": [
               {
@@ -87,6 +62,16 @@
                 "emoji": {
                   "id": "1551672182088798239",
                   "name": "instagramicon"
+                }
+              },
+              {
+                "type": 2,
+                "style": 5,
+                "label": "Bsky",
+                "url": "https://bsky.app/profile/sagitariogal.bsky.social",
+                "emoji": {
+                  "id": "1551672136756760706",
+                  "name": "bskyicon"
                 }
               }
             ]

@@ -53,27 +53,43 @@
             "components": [
               {
                 "type": 2,
-                "style": 2,
+                "style": 5,
                 "label": "Shop",
-                "url": "https://ko-fi.com/sagitariogal"
+                "url": "https://ko-fi.com/sagitariogal",
+                "emoji": {
+                  "id": "1551672260799234130",
+                  "name": "sparkleicon"
+                }
               },
               {
                 "type": 2,
-                "style": 2,
+                "style": 5,
                 "label": "Commissions",
-                "url": "https://sagitariogal.github.io/#commissions"
+                "url": "https://sagitariogal.github.io/#commissions",
+                "emoji": {
+                  "id": "1551672260799234130",
+                  "name": "sparkleicon"
+                }
               },
               {
                 "type": 2,
-                "style": 2,
+                "style": 5,
                 "label": "Instagram",
-                "url": "https://instagram.com/sagitariogal"
+                "url": "https://instagram.com/sagitariogal",
+                "emoji": {
+                  "id": "1551672182088798239",
+                  "name": "instagramicon"
+                }
               },
               {
                 "type": 2,
-                "style": 2,
+                "style": 5,
                 "label": "Bsky",
-                "url": "https://bsky.app/profile/sagitariogal.bsky.social"
+                "url": "https://bsky.app/profile/sagitariogal.bsky.social",
+                "emoji": {
+                  "id": "1551672136756760706",
+                  "name": "bskyicon"
+                }
               }
             ]
           }

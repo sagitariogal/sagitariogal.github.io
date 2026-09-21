@@ -12,10 +12,8 @@
               }
             ],
             "accessory": {
-              "type": 2,
-              "style": 5,
-              "label": "Open Site",
-              "url": "https://sagitariogal.github.io"
+              "type": 11,
+              "media": { "url": "https://sagitariogal.github.io/assets/art/discord-embed/d4.png" }
             }
           },
           {
@@ -44,6 +42,16 @@
               {
                 "type": 2,
                 "style": 5,
+                "label": "Website",
+                "url": "https://sagitariogal.github.io",
+                "emoji": {
+                  "id": "1551672260799234130",
+                  "name": "sparkleicon"
+                }
+              },
+              {
+                "type": 2,
+                "style": 5,
                 "label": "Shop",
                 "url": "https://ko-fi.com/sagitariogal",
                 "emoji": {
@@ -69,16 +77,6 @@
                 "emoji": {
                   "id": "1551672182088798239",
                   "name": "instagramicon"
-                }
-              },
-              {
-                "type": 2,
-                "style": 5,
-                "label": "Bsky",
-                "url": "https://bsky.app/profile/sagitariogal.bsky.social",
-                "emoji": {
-                  "id": "1551672136756760706",
-                  "name": "bskyicon"
                 }
               }
             ]
